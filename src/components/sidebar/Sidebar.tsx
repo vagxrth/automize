@@ -29,7 +29,7 @@ const Sidebar = (props: Props) => {
           className='flex font-bold flex-row'
           href='/'
         >
-          First Million
+          Automize
         </Link>
         <TooltipProvider>
           {menuOptions.map((menuItem) => (

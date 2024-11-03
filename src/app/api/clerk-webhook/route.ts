@@ -2,7 +2,7 @@ import { db } from '@/lib/db'
 import { NextResponse } from 'next/server'
 
 // Add this export to configure the route
-export const dynamic = 'force-dynamic'
+export const fetchCache = 'force-no-store';
 
 export async function POST(req: Request) {
     try {

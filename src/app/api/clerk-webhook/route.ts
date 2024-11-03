@@ -1,6 +1,9 @@
 import { db } from '@/lib/db'
 import { NextResponse } from 'next/server'
 
+// Add this export to configure the route
+export const dynamic = 'force-dynamic'
+
 export async function POST(req: Request) {
     try {
         const body = await req.json()

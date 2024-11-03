@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "Automize",
   description: "Automize Your Business",
   icons: {
-    icon: "src/app/favicon.ico",
+    icon: "public/automize.ico",
   }
 };
 

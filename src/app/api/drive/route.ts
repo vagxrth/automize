@@ -2,6 +2,8 @@ import { google } from 'googleapis'
 import { NextResponse } from 'next/server'
 import { auth, clerkClient } from '@clerk/nextjs/server'
 
+export const fetchCache = 'force-no-store';
+
 export async function GET() {
   const oauth2Client = new google.auth.OAuth2(
     process.env.GOOGLE_CLIENT_ID,

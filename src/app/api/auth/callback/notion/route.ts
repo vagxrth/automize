@@ -2,6 +2,7 @@ import axios from 'axios';
 import { NextRequest, NextResponse } from 'next/server';
 import { Client } from '@notionhq/client';
 
+export const fetchCache = 'force-no-store';
 export async function GET(req: NextRequest) {
     const code = req.nextUrl.searchParams.get('code');
     const encoded = Buffer.from(

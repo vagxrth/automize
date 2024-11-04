@@ -1,10 +1,17 @@
 import { db } from '@/lib/db'
 import { NextResponse } from 'next/server'
 
+// Add this export to configure the route
+export const fetchCache = 'force-no-store';
+
 export async function POST(req: Request) {
     try {
         const body = await req.json()
-        const { id, email_addresses, first_name, image_url } = body?.data
+        const { id, email_addresses, first_name, image_url } = body?.data || {}
+
+        if (!id || !email_addresses || email_addresses.length === 0) {
+            return new NextResponse('Required parameter not provided', { status: 400 })
+        }
 
         const email = email_addresses[0]?.email_address
 

@@ -6,6 +6,8 @@ import axios from 'axios'
 import { headers } from 'next/headers'
 import { NextRequest } from 'next/server'
 
+export const fetchCache = 'force-no-store';
+
 export async function POST(req: NextRequest) {
 //   console.log('🔴 Changed')
   const headersList = headers()

@@ -1,6 +1,8 @@
 import { NextResponse, NextRequest } from 'next/server'
 import Stripe from 'stripe'
 
+export const fetchCache = 'force-no-store';
+
 export async function GET(req: NextRequest) {
   const stripe = new Stripe(process.env.STRIPE_SECRET!, {
     typescript: true,

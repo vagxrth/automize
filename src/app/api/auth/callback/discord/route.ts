@@ -2,6 +2,8 @@ import axios from 'axios'
 import { NextResponse, NextRequest } from 'next/server'
 import url from 'url'
 
+export const fetchCache = 'force-no-store';
+
 export async function GET(req: NextRequest) {
     const code = req.nextUrl.searchParams.get('code')
     if (code) {
